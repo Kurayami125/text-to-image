@@ -102,6 +102,19 @@ ctx.fillText(
       300
     );
 
+    // ===== MAKE BY =====
+
+ctx.font = "bold 18px Sans";
+
+ctx.fillStyle = "#00e5ff";
+ctx.fillText("Make by Kurayami125", 17, 387);
+
+ctx.fillStyle = "#ff6ec7";
+ctx.fillText("Make by Kurayami125", 13, 383);
+
+ctx.fillStyle = "#ffffff";
+ctx.fillText("Make by Kurayami125", 15, 385);
+    
     // ===== EXPORT PNG =====
 
     const buffer = canvas.toBuffer("image/png");
