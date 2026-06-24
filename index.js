@@ -67,6 +67,7 @@ for (let i = 0; i < 50; i++) {
 
 ctx.strokeStyle =
   "rgba(255,255,255,0.15)";
+
 ctx.lineWidth = 3;
 
 ctx.strokeRect(
@@ -85,61 +86,59 @@ ctx.font = applyText(
   120
 );
 
-// RGB Shadow
+ctx.textAlign = "center";
 
 ctx.fillStyle = "#00e5ff";
 ctx.fillText(
   text,
-  103,
+  603,
   203
 );
 
 ctx.fillStyle = "#ff6ec7";
 ctx.fillText(
   text,
-  97,
+  597,
   197
 );
 
 ctx.fillStyle = "#ffffff";
 ctx.fillText(
   text,
-  100,
+  600,
   200
 );
 
 // ===== MAKE BY =====
 
-const credit =
-  `Make by ${username}`;
+const credit = `Make by ${username}`;
 
 ctx.font = "bold 35px Sans";
 
 ctx.fillStyle = "#00e5ff";
 ctx.fillText(
   credit,
-  383,
+  603,
   303
 );
 
 ctx.fillStyle = "#ff6ec7";
 ctx.fillText(
   credit,
-  377,
+  597,
   297
 );
 
 ctx.fillStyle = "#ffffff";
 ctx.fillText(
   credit,
-  380,
+  600,
   300
 );
 
-// ===== EXPORT PNG =====
+// ===== EXPORT =====
 
-const buffer =
-  canvas.toBuffer("image/png");
+const buffer = canvas.toBuffer("image/png");
 
 res.setHeader(
   "Content-Type",
@@ -158,8 +157,7 @@ res.status(500).send(
 }
 });
 
-const PORT =
-process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
 console.log(
